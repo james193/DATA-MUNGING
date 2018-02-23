@@ -1,0 +1,30 @@
+{
+  "name": "DATA-MUNGING",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint combine.js",
+    "generate": "node combine.js",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/james193/DATA-MUNGING.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/james193/DATA-MUNGING/issues"
+  },
+  "homepage": "https://github.com/james193/DATA-MUNGING#readme",
+  "dependencies": {
+    "eslint": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}
