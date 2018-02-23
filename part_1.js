@@ -6,7 +6,7 @@ const fs = require('fs'); // module required to read the files
 const readline = require('readline');
 const Stream = require('stream');
 
-const instream = fs.createReadStream('./chicagocrimes.csv'); // straming in data asynchronously
+const instream = fs.createReadStream('./chicagocrimes.csv'); // streming in data asynchronously
 const outstream = new Stream();
 // let ostream = fs.createWriteStream('output1.json');
 const rl = readline.createInterface(instream, outstream);
@@ -16,6 +16,7 @@ let descI;
 let result1;
 const result = [];
 let headers = [];
+//regex for identifying theft
 const tester = new RegExp('(.*)(,THEFT,)(.*)');
 
 const mp1 = {};
@@ -33,6 +34,7 @@ for (let q = 0; q < 2017; q += 1) {
 }
 rl.on('line', (line) => {
   if (a === 0) {
+  	//to find index of headers
     headers = line.split(',');
     for (let i = 0; i < headers.length; i += 1) {
       if (headers[i] === 'Year') { yearI = i; }
@@ -51,6 +53,7 @@ rl.on('line', (line) => {
         }
       }
     }
+    //creating objects 
     obj[headers[yearI]] = currentline[yearI];
     obj.countOver = mp1[year];
     obj.countUnder = mp2[year];
@@ -66,11 +69,12 @@ rl.on('close', () => {
     fp2[result[k].Year] = result[k].countUnder;
   }
   for (let t = 2001; t < 2017; t += 1) {
+  	//creating objects to push in final array
     const objs = {};
     objs.year = t;
     objs.countOver = fp1[t];
     objs.countUnder = fp2[t];
-
+    //this array is used to stringify objects
     answer1.push(objs);
   }
   result1 = JSON.stringify(answer1);

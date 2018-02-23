@@ -15,6 +15,7 @@ let yearI;
 let descI;
 const result = [];
 let headers = [];
+//regex for identifying Assault,true,false
 const tester = new RegExp('(.*)(,ASSAULT,)(.*)');
 const nector = new RegExp('(.*)(,true,)(.*)');
 const sector = new RegExp('(.*)(,false,)(.*)');
@@ -34,6 +35,7 @@ for (let q = 0; q < 2017; q += 1) {
 }
 rl.on('line', (line) => {
   if (a === 0) {
+    //to find index of headers
     headers = line.split(',');
     yearI = headers.indexOf('Year');
     descI = headers.indexOf('Arrest');
@@ -52,6 +54,7 @@ rl.on('line', (line) => {
           }
         }
       }
+      //creating objects
       obj[headers[yearI]] = currentline[yearI];
       obj.Arrested = mp1[year];
       obj.NotArrested = mp2[year];
@@ -70,11 +73,12 @@ rl.on('close', () => {
   }
 
   for (let t = 2001; t < 2017; t += 1) {
+    //creating objects to push in final array
     const objs = {};
     objs.year = t;
     objs.Arrested = fp1[t];
     objs.NotArrested = fp2[t];
-
+    //this array is used to stringify objects
     answer1.push(objs);
   }
   const result1 = JSON.stringify(answer1);
