@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "./node_modules/.bin/eslint combine.js",
-    "generate": "node combine.js",
+    "lint": "./node_modules/.bin/eslint part_1.js",
+    "generate": "node part_1.js",
+    "lint": "./node_modules/.bin/eslint part_2.js",
+    "generate": "node part_2.js",
     "start": "http-server"
   },
   "repository": {

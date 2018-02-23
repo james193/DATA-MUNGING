@@ -16,11 +16,11 @@ var y = d3v3.scaleLinear().range([height, 0]);
 // define the line
 var valueline = d3v3.line()
     .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.Arrested); });
+    .y(function(d) { return y(d.arrest); });
 // define the line
 var valueline2 = d3v3.line()
     .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.NotArrested); });
+    .y(function(d) { return y(d.noarrest); });
   
 // append the svg obgect to the body of the page
 // appends a 'group' element to 'svg'
@@ -37,8 +37,8 @@ function draw(data) {
   // format the data
   data.forEach(function(d) {
       d.year = parseTime(d.year);
-      d.Arrested = +d.Arrested;
-      d.NotArrested = +d.NotArrested;
+      d.arrest = +d.arrest;
+      d.noarrest = +d.noarrest;
   });
   
   
@@ -46,7 +46,7 @@ function draw(data) {
   // Scale the range of the data
   x.domain(d3v3.extent(data, function(d) { return d.year; }));
   y.domain([0, d3v3.max(data, function(d) {
-    return Math.max(d.Arrested, d.NotArrested); })]);
+	  return Math.max(d.arrest, d.noarrest); })]);
   
   // Add the valueline path.
   svg.append("path")
@@ -66,12 +66,6 @@ function draw(data) {
   // Add the Y Axis
   svg.append("g")
       .call(d3v3.axisLeft(y));
-      .append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("y", -60)
-        .attr("dy", ".1000em")
-        .style("text-anchor", "end")
-        .text("Number of Arrests");
   }
 // Get the data
 d3.json("part_2.json", function(error, data) {
