@@ -16,11 +16,11 @@ var y = d3v3.scaleLinear().range([height, 0]);
 // define the line
 var valueline = d3v3.line()
     .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.arrest); });
+    .y(function(d) { return y(d.countArrested); });
 // define the line
 var valueline2 = d3v3.line()
     .x(function(d) { return x(d.year); })
-    .y(function(d) { return y(d.noarrest); });
+    .y(function(d) { return y(d.countNotArrested); });
   
 // append the svg obgect to the body of the page
 // appends a 'group' element to 'svg'
@@ -37,8 +37,8 @@ function draw(data) {
   // format the data
   data.forEach(function(d) {
       d.year = parseTime(d.year);
-      d.arrest = +d.arrest;
-      d.noarrest = +d.noarrest;
+      d.countArrested = +d.countArrested;
+      d.countNotArrested = +d.countNotArrested;
   });
   
   
@@ -46,7 +46,7 @@ function draw(data) {
   // Scale the range of the data
   x.domain(d3v3.extent(data, function(d) { return d.year; }));
   y.domain([0, d3v3.max(data, function(d) {
-	  return Math.max(d.arrest, d.noarrest); })]);
+	  return Math.max(d.countArrested, d.countNotArrested); })]);
   
   // Add the valueline path.
   svg.append("path")

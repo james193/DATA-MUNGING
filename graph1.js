@@ -39,14 +39,14 @@ d3.json("output_1.json", function(error, data) {
 
     data.forEach(function(d) {
         d.year = d.year;
-        d.countOver = +d.countOver;
-        d.countUnder = +d.countUnder;
+        d.countOver500 = +d.countOver500;
+        d.countUnder500 = +d.countUnder500;
     });
   
   // scale the range of the data
   x.domain(data.map(function(d) { return d.year; }));
-  y.domain([0, d3.max(data, function(d) { return d.countOver; })]);
-   y.domain([0, d3.max(data, function(d) { return d.countUnder; })]);
+  y.domain([0, d3.max(data, function(d) { return d.countOver500; })]);
+   y.domain([0, d3.max(data, function(d) { return d.countUnder500; })]);
 
   // add axis
   svg.append("g")
@@ -66,7 +66,7 @@ d3.json("output_1.json", function(error, data) {
     .append("text")
       .attr("transform", "rotate(-90)")
       .attr("y", -60)
-      .attr("dy", ".1000em")
+      .attr("dy", ".100em")
       .style("text-anchor", "end")
       .text("Number of Thefts");
 
@@ -80,8 +80,8 @@ d3.json("output_1.json", function(error, data) {
       .attr("class", "bar1")
       .attr("x", function(d) { return x(d.year); })
       .attr("width", (x.rangeBand()/2))
-      .attr("y", function(d) { return y(d.countOver); })
-      .attr("height", function(d) { return height - y(d.countOver); });
+      .attr("y", function(d) { return y(d.countOver500); })
+      .attr("height", function(d) { return height - y(d.countOver500); });
      
 
        svg.selectAll("bar2")
@@ -90,8 +90,8 @@ d3.json("output_1.json", function(error, data) {
       .attr("class", "bar2")
       .attr("x", function(d) { return x(d.year); })
       .attr("width", (x.rangeBand()/4))
-       .attr("y", function(d) { return y(d.countUnder); })
-      .attr("height", function(d) { return height - y(d.countUnder); });
+       .attr("y", function(d) { return y(d.countUnder500); })
+      .attr("height", function(d) { return height - y(d.countUnder500); });
 
 
 });
