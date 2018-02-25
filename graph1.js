@@ -70,9 +70,6 @@ d3.json("output_1.json", function(error, data) {
       .style("text-anchor", "end")
       .text("Number of Thefts");
 
-    
-
-
   // Add bar chart
   svg.selectAll("bar1")
       .data(data)

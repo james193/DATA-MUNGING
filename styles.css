@@ -1,3 +1,19 @@
+#combine{
+  display: flex;
+  flex-direction: column;
+}
+#graph1{
+  flex-basis: 50%;
+}
+#graph2{
+ flex-basis: 50%; 
+}
+#two{
+  text-align: end;
+}
+#three{
+  text-align: end;
+}
 .line1 {
   fill: none;
   stroke: blue;
