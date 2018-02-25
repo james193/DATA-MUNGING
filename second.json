@@ -1,0 +1,81 @@
+[
+{
+    "year": 2001,
+    "countArrested": 6611,
+    "countNotArrested": 22527
+},
+{
+    "year": 2002,
+    "countArrested": 6732,
+    "countNotArrested": 22487
+},
+{
+    "year": 2003,
+    "countArrested": 6341,
+    "countNotArrested": 20852
+},
+{
+    "year": 2004,
+    "countArrested": 6349,
+    "countNotArrested": 19945
+},
+{
+    "year": 2005,
+    "countArrested": 6020,
+    "countNotArrested": 18683
+},
+{
+    "year": 2006,
+    "countArrested": 5752,
+    "countNotArrested": 17988
+},
+{
+    "year": 2007,
+    "countArrested": 6003,
+    "countNotArrested": 18232
+},
+{
+    "year": 2008,
+    "countArrested": 3174,
+    "countNotArrested": 12113
+},
+{
+    "year": 2009,
+    "countArrested": 5184,
+    "countNotArrested": 15923
+},
+{
+    "year": 2010,
+    "countArrested": 4605,
+    "countNotArrested": 15321
+},
+{
+    "year": 2011,
+    "countArrested": 4780,
+    "countNotArrested": 14200
+},
+{
+    "year": 2012,
+    "countArrested": 4498,
+    "countNotArrested": 14095
+},
+{
+    "year": 2013,
+    "countArrested": 4143,
+    "countNotArrested": 12497
+},
+{
+    "year": 2014,
+    "countArrested": 4191,
+    "countNotArrested": 11565
+},
+{
+    "year": 2015,
+    "countArrested": 3809,
+    "countNotArrested": 12245
+},
+{
+    "year": 2016,
+    "countArrested": 859,
+    "countNotArrested": 3800
+}]

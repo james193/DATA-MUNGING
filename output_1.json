@@ -1,0 +1,81 @@
+[
+{
+    "year": 2001,
+    "countOver500": 32222,
+    "countUnder500": 60352
+},
+{
+    "year": 2002,
+    "countOver500": 27367,
+    "countUnder500": 46378
+},
+{
+    "year": 2003,
+    "countOver500": 20394,
+    "countUnder500": 36387
+},
+{
+    "year": 2004,
+    "countOver500": 19020,
+    "countUnder500": 35270
+},
+{
+    "year": 2005,
+    "countOver500": 18648,
+    "countUnder500": 27378
+},
+{
+    "year": 2006,
+    "countOver500": 20506,
+    "countUnder500": 26706
+},
+{
+    "year": 2007,
+    "countOver500": 21852,
+    "countUnder500": 24756
+},
+{
+    "year": 2008,
+    "countOver500": 16600,
+    "countUnder500": 17517
+},
+{
+    "year": 2009,
+    "countOver500": 21134,
+    "countUnder500": 23732
+},
+{
+    "year": 2010,
+    "countOver500": 21432,
+    "countUnder500": 24071
+},
+{
+    "year": 2011,
+    "countOver500": 15283,
+    "countUnder500": 28329
+},
+{
+    "year": 2012,
+    "countOver500": 15599,
+    "countUnder500": 28767
+},
+{
+    "year": 2013,
+    "countOver500": 15259,
+    "countUnder500": 27118
+},
+{
+    "year": 2014,
+    "countOver500": 14521,
+    "countUnder500": 28173
+},
+{
+    "year": 2015,
+    "countOver500": 12390,
+    "countUnder500": 24193
+},
+{
+    "year": 2016,
+    "countOver500": 3486,
+    "countUnder500": 5925
+}]

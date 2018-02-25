@@ -68,7 +68,7 @@ function draw(data) {
       .call(d3v3.axisLeft(y));
   }
 // Get the data
-d3.json("part_2.json", function(error, data) {
+d3.json("output_2.json", function(error, data) {
   if (error) throw error;
   
   

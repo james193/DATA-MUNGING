@@ -35,7 +35,7 @@ var svg = d3.select("#graph1").append("svg")
 
 
 // load the data
-d3.json("part_1.json", function(error, data) {
+d3.json("output_1.json", function(error, data) {
 
     data.forEach(function(d) {
         d.year = d.year;
