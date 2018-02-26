@@ -1,67 +1,74 @@
-#combine{
-  display: flex;
-  flex-direction: column;
+#combine {
+    display: flex;
+    flex-direction: column;
 }
-#graph1{
-  flex-basis: 50%;
+
+#graph1 {
+    flex-basis: 55%;
 }
-#graph2{
- flex-basis: 50%; 
+
+#graph2 {
+    flex-basis: 45%;
 }
-#two{
-  text-align: end;
+
+#two {
+    text-align: end;
 }
-#three{
-  text-align: end;
+
+#three {
+    text-align: end;
 }
+
 .line1 {
-  fill: none;
-  stroke: blue;
-  stroke-width: 2px;
+    fill: none;
+    stroke: blue;
+    stroke-width: 2px;
 }
+
 .line2 {
-  fill: none;
-  stroke: red;
-  stroke-width: 2px;
+    fill: none;
+    stroke: red;
+    stroke-width: 2px;
 }
 
 html {
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
-  }
-   
+}
 
 
-  .bar1{
+
+.bar1 {
     fill: blue;
-  }
+}
 
-  .bar1:hover{
+.bar1:hover {
     fill: black;
-  }
-    .bar2{
-    fill:red;
-  }
+}
 
-  .bar2:hover{
+.bar2 {
     fill: red;
-  }
+}
 
-  .axis {
+.bar2:hover {
+    fill: red;
+}
+
+.axis {
     font-size: 12px;
-  }
+}
 
-  .axis path,
-  .axis line {
+.axis path,
+.axis line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
-  }
+}
 
-  svg{
+svg {
     margin-left: 100px;
-  }
+}
 
-#graph1 h3,#graph2 h3
-{
-  text-align: center; 
+#graph1 h3,
+#graph2 h3 {
+    text-align: center;
 }
